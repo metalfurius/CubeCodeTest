@@ -34,7 +34,7 @@ public class EnemyMovement : MonoBehaviour
 
     private void MoveSin()
     {
-        rb.velocity = new Vector3(0, 0, Mathf.Sin(Time.time * frequency) * amplitude);
+        rb.velocity = new Vector3(rb.velocity.x, rb.velocity.y, Mathf.Sin(Time.time * frequency) * amplitude);
     }
 
     private void MoveForward()
