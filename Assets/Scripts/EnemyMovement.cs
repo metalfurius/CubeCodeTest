@@ -22,8 +22,8 @@ public class EnemyMovement : MonoBehaviour
     {
         int randomNegative = Random.Range(0, 2) * 2 - 1;
         speed = Random.Range(3, 5);
-        amplitude = Random.Range(2, 5)*randomNegative;
-        frequency = Random.Range(2, 5)*randomNegative;
+        amplitude = Random.Range(4, 7)*randomNegative;
+        frequency = Random.Range(4, 7)*randomNegative;
     }
 
     void FixedUpdate()
