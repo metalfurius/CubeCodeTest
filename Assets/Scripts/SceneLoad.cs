@@ -9,6 +9,7 @@ public class SceneLoad : MonoBehaviour
     public void ReloadScene()
     {
         SceneManager.LoadScene(GetSceneName());
+        Time.timeScale = 1.0f;
     }
 
     private string GetSceneName()
