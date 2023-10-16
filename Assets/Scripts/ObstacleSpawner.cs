@@ -25,6 +25,6 @@ public class ObstacleSpawner : MonoBehaviour
     {
         int randomObstacleIndex = Random.Range(0, obstacles.Count);
         int randomSpawnPointIndex = Random.Range(0, spawnPoints.Count);
-        currentObject = Instantiate(obstacles[randomObstacleIndex], spawnPoints[randomSpawnPointIndex].position, Quaternion.identity);
+        currentObject = Instantiate(obstacles[randomObstacleIndex], spawnPoints[randomSpawnPointIndex].position, obstacles[randomObstacleIndex].transform.rotation);
     }
 }

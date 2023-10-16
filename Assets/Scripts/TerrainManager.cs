@@ -12,7 +12,7 @@ public class TerrainManager : MonoBehaviour
 
     private void FixedUpdate()
     {
-        bool nearEdge = playerTransform.position.x < (-terrainSize + distanceTrigger);
+        bool nearEdge = playerTransform.position.x < (-terrainSize/2 + distanceTrigger);
         if(nearEdge)
         {
             ChangeNextTerrainPosition();

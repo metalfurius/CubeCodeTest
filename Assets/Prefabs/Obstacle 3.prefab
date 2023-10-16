@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2822972794812709101}
   - component: {fileID: -5113236513571490279}
   - component: {fileID: 2043258800706792325}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Obstacle 3
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -106,7 +106,7 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5000001
-  m_Height: 2
+  m_Height: 2.66
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!54 &-5113236513571490279

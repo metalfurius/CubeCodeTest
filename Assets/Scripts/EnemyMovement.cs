@@ -39,7 +39,7 @@ public class EnemyMovement : MonoBehaviour
 
     private void MoveForward()
     {
-        transform.Translate(speed * Time.deltaTime * Vector3.right);
+        rb.velocity = new Vector3(Mathf.MoveTowards(rb.velocity.x, speed, speed * Time.deltaTime), rb.velocity.y, rb.velocity.z);
     }
 
     void OnCollisionEnter(Collision collision)

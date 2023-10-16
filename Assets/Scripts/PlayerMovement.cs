@@ -6,8 +6,9 @@ using UnityEngine.EventSystems;
 public class PlayerMovement : MonoBehaviour
 {
     public Rigidbody rb;
-    public float forwardSpeed, sideSpeed,jumpForce;
+    public float forwardSpeed, sideSpeed;
     Vector3 moveDirection;
+
     void Update()
     {
         GetMovementFromInput();
@@ -27,7 +28,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void ForwardVelocity()
     {
-        transform.Translate(forwardSpeed * Time.deltaTime * Vector3.left);
+        rb.velocity = new Vector3(Mathf.MoveTowards(rb.velocity.x, -forwardSpeed, forwardSpeed * Time.deltaTime), rb.velocity.y, rb.velocity.z);
     }
 
     private void SideVelocity()
