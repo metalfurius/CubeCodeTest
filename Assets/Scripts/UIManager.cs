@@ -6,12 +6,30 @@ using UnityEngine.Events;
 
 public class UIManager : MonoBehaviour
 {
+    public static UIManager instance;
     public TextMeshProUGUI timeText;
     public TextMeshProUGUI scoreText;
 
     float time = 0f;
     int minutes = 0;
     int score=0;
+
+    private void Awake()
+    {
+        CreateSingleton();
+    }
+
+    private void CreateSingleton()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(this);
+        }
+    }
 
     void FixedUpdate()
     {
@@ -29,7 +47,7 @@ public class UIManager : MonoBehaviour
         int seconds = Mathf.FloorToInt(time % 60f);
         timeText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
-    void AddScore()
+    public void AddScore()
     {
         score+=Random.Range(10,20);
         scoreText.text="Score "+score.ToString("0");

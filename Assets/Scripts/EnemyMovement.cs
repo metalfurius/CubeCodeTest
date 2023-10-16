@@ -8,6 +8,7 @@ public class EnemyMovement : MonoBehaviour
     float speed = 5.0f;
     float amplitude = 2.0f;
     float frequency = 1.0f;
+    bool destroyedByCollision = false;
 
     private Rigidbody rb;
 
@@ -44,12 +45,17 @@ public class EnemyMovement : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            destroyedByCollision = true;
             Destroy(gameObject);
         }
     }
     void OnBecameInvisible()
     {
-        Destroy(gameObject);
+        if (!destroyedByCollision)
+        {
+            UIManager.instance.AddScore();
+            Destroy(gameObject);
+        }
     }
 
 }
