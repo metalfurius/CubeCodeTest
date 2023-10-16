@@ -10,18 +10,18 @@ public class EnemySpawner : MonoBehaviour
 
     void Start()
     {
-        SpawnNextPrefab();
+        SpawnPrefab();
     }
 
     void FixedUpdate()
     {
         if (currentObject == null)
         {
-            SpawnNextPrefab();
+            SpawnPrefab();
         }
     }
 
-    void SpawnNextPrefab()
+    void SpawnPrefab()
     {
         currentObject = Instantiate(prefab, transform.position, Quaternion.identity);
     }

@@ -14,6 +14,6 @@ public class FollowPlayerSpawner : MonoBehaviour
 
     private void SetPosition(Transform playerpos)
     {
-        transform.position = new Vector3(playerpos.position.x + offset.x, 0,0);
+        transform.position = new Vector3(playerpos.position.x + offset.x, transform.position.y,0);
     }
 }

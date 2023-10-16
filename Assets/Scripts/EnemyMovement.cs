@@ -20,9 +20,10 @@ public class EnemyMovement : MonoBehaviour
 
     private void GetRandomValues()
     {
-        speed = Random.Range(2, 5);
-        amplitude = Random.Range(-4, 4);
-        frequency = Random.Range(-4, 4);
+        int randomNegative = Random.Range(0, 2) * 2 - 1;
+        speed = Random.Range(3, 5);
+        amplitude = Random.Range(2, 5)*randomNegative;
+        frequency = Random.Range(2, 5)*randomNegative;
     }
 
     void FixedUpdate()
