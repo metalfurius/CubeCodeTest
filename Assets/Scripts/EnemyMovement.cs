@@ -45,6 +45,7 @@ public class EnemyMovement : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            UIManager.instance.EndGame();
             destroyedByCollision = true;
             Destroy(gameObject);
         }

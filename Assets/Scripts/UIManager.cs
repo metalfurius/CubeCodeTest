@@ -10,6 +10,10 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI timeText;
     public TextMeshProUGUI scoreText;
 
+    public TextMeshProUGUI endTimeText;
+    public TextMeshProUGUI endScoreText;
+    public GameObject endGameUI;
+
     float time = 0f;
     int minutes = 0;
     int score=0;
@@ -33,10 +37,10 @@ public class UIManager : MonoBehaviour
 
     void FixedUpdate()
     {
-        GetTimeText();
+        timeText.text= GetTimeText();
     }
 
-    void GetTimeText()
+    string GetTimeText()
     {
         time += Time.deltaTime;
         if (time >= 60f)
@@ -44,12 +48,19 @@ public class UIManager : MonoBehaviour
             minutes++;
             time = 0f;
         }
-        int seconds = Mathf.FloorToInt(time % 60f);
-        timeText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+        var seconds = Mathf.FloorToInt(time % 60f);
+        var result = string.Format("{0:00}:{1:00}", minutes, seconds);
+        return result;
     }
     public void AddScore()
     {
         score+=Random.Range(10,20);
         scoreText.text="Score "+score.ToString("0");
+    }
+    public void EndGame()
+    {
+        endGameUI.SetActive(true);
+        endTimeText.text= GetTimeText();
+        endScoreText.text= "Score " + score.ToString("0");
     }
 }
