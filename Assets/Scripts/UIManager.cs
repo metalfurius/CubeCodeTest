@@ -57,6 +57,11 @@ public class UIManager : MonoBehaviour
         score+=Random.Range(10,20);
         scoreText.text="Score "+score.ToString("0");
     }
+    public void SubstractScore()
+    {
+        score -= Random.Range(10, 20);
+        scoreText.text = "Score " + score.ToString("0");
+    }
     public void EndGame()
     {
         endGameUI.SetActive(true);
