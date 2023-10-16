@@ -59,7 +59,7 @@ public class UIManager : MonoBehaviour
     }
     public void SubstractScore()
     {
-        score -= Random.Range(10, 20);
+        score -= Random.Range(20, 40);
         scoreText.text = "Score " + score.ToString("0");
     }
     public void EndGame()

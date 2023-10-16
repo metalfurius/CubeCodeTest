@@ -1,0 +1,8 @@
+Añadidos sobre lo propuesto:
+- Aumento aleatorio de la puntuación en un rango definido al esquivar un enemigo, añade mas sensación de recompensa
+- Los obstáculos del terreno y el trail añadido al jugador permiten obtener la sensación de avanzar que se busca a pesar de
+no haber assets de arte, consiguiendo lo que se pide en el punto 2.3
+- Al igual que al sumar puntuación he modificado el numero que se resta al chocar un obstáculo, siendo este el doble del rango
+de recompensa
+- Añadido animación al terminar partida de aparición de UI y el botón de "Retry" para dar sensación de querer jugar de nuevo
+- Niebla que no permite ver al jugador fuera de cierto rango
