@@ -62,5 +62,6 @@ public class UIManager : MonoBehaviour
         endGameUI.SetActive(true);
         endTimeText.text= GetTimeText();
         endScoreText.text= "Score " + score.ToString("0");
+        Time.timeScale = 0f;
     }
 }
