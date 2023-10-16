@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class EnemyMovement : MonoBehaviour
 {
@@ -19,8 +20,8 @@ public class EnemyMovement : MonoBehaviour
     private void GetRandomValues()
     {
         speed = Random.Range(2, 5);
-        amplitude = Random.Range(-5, 5);
-        frequency = Random.Range(-5, 5);
+        amplitude = Random.Range(-4, 4);
+        frequency = Random.Range(-4, 4);
     }
 
     void FixedUpdate()
@@ -50,6 +51,5 @@ public class EnemyMovement : MonoBehaviour
     {
         Destroy(gameObject);
     }
-
 
 }
